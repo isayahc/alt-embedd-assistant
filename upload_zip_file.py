@@ -4,6 +4,13 @@ import os
 from typing import Optional
 from io import BytesIO
 
+##########################################################
+#
+# REFERENCES
+# https://docs.llamaindex.ai/en/stable/examples/vector_stores/MilvusIndexDemo.html#milvus-vector-store
+#
+##########################################################
+
 # Function to extract and save files from a zip archive
 def save_uploaded_file(uploaded_file: BytesIO, path: str) -> None:
     with zipfile.ZipFile(uploaded_file, "r") as zip_ref:
