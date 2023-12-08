@@ -4,6 +4,8 @@ import os
 from typing import Optional
 from io import BytesIO
 
+from generate_wiki_docs import wiki_docs
+
 ##########################################################
 #
 # REFERENCES
@@ -30,6 +32,13 @@ def main() -> None:
         save_uploaded_file(uploaded_file, save_path)
 
         st.success("File Uploaded and Extracted Successfully!")
+
+        documents = SimpleDirectoryReader(save_path).load_data()
+
+    else:
+
+        documents = wiki_docs
+        
 
 if __name__ == "__main__":
     main()
