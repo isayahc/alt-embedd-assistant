@@ -110,7 +110,7 @@ def main():
         selected_chunk_overlap = st.number_input(
         "Enter Chunk Overlap",
         min_value=0,  # Minimum value
-        value=0,     # Default value
+        value=30,     # Default value
         step=1,        # Increment step
         max_value=50,
     )
